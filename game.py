@@ -7,7 +7,7 @@ from scenes.main_menu_scene import MainMenuScene
 class Game:
     def __init__(self) -> None:
         pygame.init()
-        self.screen = pygame.display.set_mode((800, 600))
+        self.screen = pygame.display.set_mode((800, 600), pygame.SRCALPHA)
         self.running = True
         self.scenes: List[BaseScene] = [MainMenuScene(self), GameScene(self)]
         self.scene_idx = 0
